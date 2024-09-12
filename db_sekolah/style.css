@@ -1,0 +1,17 @@
+body {
+        margin: 50px auto;
+    }
+
+    table {
+        background-color: pink;
+        margin: 20px auto;
+        width: 80%;
+        text-align: left;
+        border-collapse: separate;
+    }
+
+    table th {
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
