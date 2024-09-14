@@ -1,18 +1,3 @@
-<?php
-// mengecek apakah submit sudah di tekan
-if (isset($_POST["submit"])) {
-    // cek username dan password
-    if ($_POST["username"] == "admin" && $_POST["password"] == "123") {
-        // jika benar, redirect ke halaman index
-        header("Location: index.php");
-        exit();
-    } else {
-        // jika salah, tampilkan kesahalan
-        $error = true;
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,9 +18,9 @@ if (isset($_POST["submit"])) {
 
     <?php if (isset($error)) : ?>
         <p> Username / Password salah. Mohon periksa kembali</p>
-    <?php endif ?>
+    <?php endif; ?>
 
-    <form action="index.php" method="post">
+    <form action="home.php" method="post">
         <label for="username">Username :</label>
         <input type="text" id="username" name="username" required>
         <br>
@@ -51,5 +36,4 @@ if (isset($_POST["submit"])) {
         <button type="submit" name="submit">Hit me~!</button>
     </form>
 </body>
-
 </html>

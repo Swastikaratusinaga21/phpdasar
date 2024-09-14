@@ -1,3 +1,5 @@
+<!-- CONTOH GET -->
+
 <?php
 
 // Superglobal || variables milik PHP

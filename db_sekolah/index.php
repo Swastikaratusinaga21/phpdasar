@@ -62,7 +62,6 @@
         }
         // Menutup koneksi ke database
         $koneksi->close();
-
         ?>
     </table>
 
