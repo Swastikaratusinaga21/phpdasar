@@ -13,8 +13,11 @@
         <tr>
             <th>NIP</th>
             <th>Nama</th>
+            <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
+            <th>Alamat</th>
+            <th>Mata Ajar</th>
+            <th>email</th>
         </tr>
 
         <?php
@@ -28,16 +31,19 @@
             die("Connection Failed: " . $koneksi->connect_error);
         }
 
-        $sql = "SELECT * FROM tb_guru";
+        $sql = "SELECT * FROM guru";
         $result = $koneksi->query($sql);
 
         if ($result > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row["nip"] . "</td>";
+                echo "<td>" . $row["nrp"] . "</td>";
                 echo "<td>" . $row["nama"] . "</td>";
-                echo "<td>" . $row["tglLahir"] . "</td>";
-                echo "<td>" . $row["gender"] . "</td>";
+                echo "<td>" . $row["tempat_lahir"] . "</td>";
+                echo "<td>" . $row["tanggal_lahir"] . "</td>";
+                echo "<td>" . $row["alamat"] . "</td>";
+                echo "<td>" . $row["mapel"] . "</td>";
+                echo "<td>" . $row["email"] . "</td>";
                 echo "</tr>";
             }
         } else {

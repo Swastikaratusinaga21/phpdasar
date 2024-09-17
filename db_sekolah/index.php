@@ -13,12 +13,13 @@
     <table>
         <tr>
             <!-- th untuk table header dari data yang akan diambil dari database -->
-            <th>NIS</th>
+            <th>NISN</th>
             <th>Nama</th>
-            <th>Kelas</th>
-            <th>Alamat</th>
+            <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
+            <th>Alamat</th>
+            <th>Kelas</th>
+            <th>Email</th>
         </tr>
 
         <!-- kode php yang mengambil data dari database  -->
@@ -41,19 +42,20 @@
         //  * : semua data
         //  FROM : Dari
         //  tb_siswa : nama tabel di database yang telah kita koneksikan sebelumnya
-        $sql = "SELECT * FROM tb_siswa";
+        $sql = "SELECT * FROM siswa";
         $result = $koneksi->query($sql);
 
         // membuat kondisi, ketika ada data yang ditemukan dari tb_siswa, maka akan membuat baris baru yang berisi data di $row. setiap $row akan berubah menjadi field/kolom di satu baris.
         if ($result > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row["nis"] . "</td>";
+                echo "<td>" . $row["nisn"] . "</td>";
                 echo "<td>" . $row["nama"] . "</td>";
-                echo "<td>" . $row["kelas"] . "</td>";
+                echo "<td>" . $row["tempat_lahir"] . "</td>";
+                echo "<td>" . $row["tanggal_lahir"] . "</td>";
                 echo "<td>" . $row["alamat"] . "</td>";
-                echo "<td>" . $row["tglLahir"] . "</td>";
-                echo "<td>" . $row["gender"] . "</td>";
+                echo "<td>" . $row["kelas"] . "</td>";
+                echo "<td>" . $row["email"] . "</td>";
                 echo "</tr>";
             }
         } else {

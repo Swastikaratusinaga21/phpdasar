@@ -12,6 +12,7 @@
 <body>
     <table>
         <tr>
+            <th>Id Kelas</th>
             <th>Ruang Kelas</th>
             <th>Tingkatan Kelas</th>
             <th>Nama Wali Kelas</th>
@@ -29,16 +30,17 @@
             die("Connection Failed: " . $koneksi->connect_error);
         }
 
-        $sql = "SELECT * FROM tb_kelas";
+        $sql = "SELECT * FROM kelas";
         $result = $koneksi->query($sql);
 
         if ($result > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
+                echo "<td>" . $row["idKelas"] . "</td>";
                 echo "<td>" . $row["ruangKelas"] . "</td>";
-                echo "<td>" . $row["tingkatanKelas"] . "</td>";
-                echo "<td>" . $row["waliKelas"] . "</td>";
-                echo "<td>" . $row["jumlahSiswa"] . "</td>";
+                echo "<td>" . $row["kelas"] . "</td>";
+                echo "<td>" . $row["nama_wali_kelas"] . "</td>";
+                echo "<td>" . $row["jlh_siswa"] . "</td>";
                 echo "</tr>";
             }
         } else {
