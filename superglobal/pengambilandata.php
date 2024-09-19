@@ -1,3 +1,5 @@
+<!-- Memunculkan data yang ada di dalam file index.php dengan metode Get -->
+
 <?php
 // Mengecek apakah tidak ada data di $_GET
 if (!isset($_GET["nama"]) || !isset($_GET["pengarang"]) || !isset($_GET["penerbit"]) || !isset($_GET["studio"]) || !isset($_GET["gambar"])) {

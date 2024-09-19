@@ -1,4 +1,5 @@
 <!-- CONTOH GET -->
+<!--  -->
 
 <?php
 
@@ -116,4 +117,5 @@ $anime = [
         <?php endforeach; ?>
     </ul>
 </body>
+
 </html>

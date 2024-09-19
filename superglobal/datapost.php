@@ -1,3 +1,5 @@
+
+
 <?php
 // Mengecek apakah ada data di $_POST
 if (isset($_GET["nama"]) || isset($_GET["email"]) || isset($_GET["instagram"]) || isset($_GET["alamat"]) || isset($_GET["password"])) {

@@ -1,4 +1,5 @@
 <!-- CONTOH POST -->
+<!-- Mengambil data dari user dengan methode post, yang dimana datanya akan dikirmkan ke datapost.php -->
 
 <!DOCTYPE html>
 <html lang="en">
