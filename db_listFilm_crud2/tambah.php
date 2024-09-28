@@ -3,6 +3,7 @@ require 'functions.php';
 
 // Cek apakah tombol submit sudah pernah ditekan atau belum
 if (isset($_POST["submit"])) {
+
     // cek apakah data berhasil atau gagal ditambahkan
     if (tambah($_POST) > 0) {
         echo "
@@ -72,7 +73,7 @@ if (isset($_POST["submit"])) {
     <h2>Tambah Data Film</h2>
 
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <table>
             <tr>
                 <td><label for="nama">Nama : </label></td>
@@ -92,7 +93,7 @@ if (isset($_POST["submit"])) {
             </tr>
             <tr>
                 <td><label for="gambar">Gambar : </label></td>
-                <td><input type="text" name="gambar" id="gambar" required></td>
+                <td><input type="file" name="gambar" id="gambar"></td>
             </tr>
         </table>
         <button type="submit" name="submit">HIT ME!</button>
