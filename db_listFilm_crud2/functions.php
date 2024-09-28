@@ -29,6 +29,28 @@ function tambah($data)
     return mysqli_affected_rows($conn);
 }
 
+function update($data)
+{
+    global $conn;
+    $nama = htmlspecialchars($data["nama"]);
+    $pengarang = htmlspecialchars($data["pengarang"]);
+    $penerbit = htmlspecialchars($data["penerbit"]);
+    $studio = htmlspecialchars($data["studio"]);
+    $gambar = htmlspecialchars($data["gambar"]);
+
+    $query = "UPDATE dataanime SET 
+            nama = '$nama', 
+            pengarang = '$pengarang', 
+            penerbit = '$penerbit', 
+            studio = '$studio', 
+            gambar = '$gambar' 
+            WHERE dataanime.IdFilm = $data[id]";
+
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
+
 function hapus($id){
     global $conn;
     mysqli_query($conn, "DELETE FROM dataanime WHERE dataanime.IdFilm = $id");

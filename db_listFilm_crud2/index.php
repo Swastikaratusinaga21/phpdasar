@@ -54,7 +54,7 @@ $listfilm = query("SELECT * FROM dataanime");
                 <td> <?= $row["penerbit"] ?></td>
                 <td> <?= $row["studio"]; ?></td>
                 <td>
-                    <a href="edit.php?id=<?= $row["IdFilm"]; ?>">Edit</a> |
+                    <a href="update.php?id=<?= $row["IdFilm"]; ?>">Update</a> |
                     <a href="hapus.php?id=<?= $row["IdFilm"]; ?>" onclick="return confirm ('yakin?');" >Hapus</a>
                 </td>
             </tr>
