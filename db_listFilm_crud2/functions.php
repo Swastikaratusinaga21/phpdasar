@@ -25,7 +25,7 @@ function tambah($data)
     if (!$gambar) {
         return false;
     }
-    
+
     $query = "INSERT INTO dataanime (nama, pengarang, penerbit, studio, gambar) VALUES ('$nama', '$pengarang', '$penerbit', '$studio', '$gambar')";
 
     mysqli_query($conn, $query);
@@ -68,8 +68,6 @@ function upload()
         alert('Gambar terlalu besar! Maksimal 9000000 KB');
         </script>";
         return false;
-    } else {
-        return true;
     }
 
     // lolos pengecekan, maka file siap diupload
