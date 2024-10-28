@@ -87,7 +87,7 @@ if (isset($_POST["submit"])) {
             </tr>
             <tr>
                 <td><label for="tanggal_lahir">Tanggal Lahir : </label></td>
-                <td><input type="text" name="tanggal_lahir" id="tanggal_lahir" required></td>
+                <td><input type="date" name="tanggal_lahir" id="tanggal_lahir" required></td>
             </tr>
             <tr>
                 <td><label for="alamat">Alamat : </label></td>
@@ -99,7 +99,7 @@ if (isset($_POST["submit"])) {
             </tr>
             <tr>
                 <td><label for="email">Email : </label></td>
-                <td><input type="text" name="email" id="email" required></td>
+                <td><input type="email" name="email" id="email" required></td>
             </tr>
         </table>
         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
